@@ -1,0 +1,185 @@
+/* Tirar todos espaços da página*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tirar o pontinho da lista não ordenada*/
+
+ul {
+    list-style: none;
+}
+
+body {
+   /*Colocar imagem no plano de fundo da web*/
+    background-image: url(/assets/bg.jpg);
+/*alterar posição do fundo*/
+    background-position: top;
+/*alterar tamanho da imagem de fundo*/
+    background-size: 100% auto;
+    /*nãp deixa a imagem repetir quando ela termina*/
+background-repeat: no-repeat;
+/*muda cor de fundo*/
+background-color: #121214;
+}
+
+main {
+    /*main é o pai, então todas as coisas dentro dele vão manter a largura máxima de 520px*/
+    max-width: 520px;
+    /*Vai ser relativel a 90% e vai se adaptar a tela*/
+    width: 90%;
+    /*quando se coloca automatico faz o calculo das margens pra se preencherem*/
+    margin: 32px auto;
+    display: grid;
+    gap: 24px;
+}
+
+body * {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 160%;
+
+}
+
+header {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.girl {
+    height: calc(120px + 32px);
+
+}
+
+header .me {
+    margin: 32px auto;
+}
+
+ .namorada {
+    color: rgb(243, 60, 60);
+}
+
+.animation {
+    height: calc(120px + 32px);
+ 
+}
+
+header img {
+    height: 120px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+    width: 120px;
+    padding: 5px;
+    transition: transform .3s;
+    animation: fromTop .7s .2s backwards;
+    }
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+padding-top: 4px;
+border-radius: 10px;
+}
+
+section h2 {
+    font-weight: 900;
+    font-size: 24px;
+}
+
+section p {
+    font-weight: 400;
+font-size: 16px;
+/*espaço entre as letras*/
+letter-spacing: -0.18px;
+color: #C1C1C1;
+}
+
+section ul {
+    display: flex;
+    /*espaço entre linhas e colunas*/
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+svg {
+    gap: 22px;
+}
+
+ul img {
+    border: 1px solid #555555;
+    border-radius: 8px;
+}
+
+section div {
+    background-color: #262629;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+header img:hover {
+transform: scale(1.1);
+}
+
+section ul li {
+transition: transform .3s;
+}
+
+section ul li:hover {
+transform: scale(1.1);
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .5s;
+}
+
+main section:nth-child(4) {
+    animation-delay: .6s;
+}
+
+main section:nth-child(5) {
+    animation-delay: .7s;
+}
+
+main section:nth-child(6) {
+    animation-delay: .8s;
+}
